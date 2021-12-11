@@ -1,4 +1,4 @@
-import os               
+import os
 import time
 import RPi.GPIO as GPIO
 #------------------- Used Pins asignation ---------------
@@ -13,32 +13,47 @@ GPIO.setmode(GPIO.BCM)
 GPIO.setup(PinMS1, GPIO.OUT)
 GPIO.setup(PinMS2, GPIO.OUT)
 GPIO.setup(PinMS3, GPIO.OUT)
-GPIO.setup(PinDir, GPIO.OUT) 
+GPIO.setup(PinDir, GPIO.OUT)
 GPIO.setup(PinStep, GPIO.OUT)
 GPIO.setup(PinFdCWhite, GPIO.IN)
 GPIO.setup(PinFdCYellow, GPIO.IN)
 os.system('clear')
-#-----------------------------------------------------------------------
-#-----------------------------------------------------------------------
+
 def ShowValues():
-#-----------------------------------------------------------------------
+    pass
+
+
 def ConfigModeSpeed():
-#---  --------------------------------------------------------------------
+    pass
+
+
 def SetModeSpeed():
-#-----------------------------------------------------------------------
+    pass
+
+
 def ConfigDirection():
-#-----------------------------------------------------------------------
+    pass
+
+
 def SetDirection():
-#-----------------------------------------------------------------------
+    pass
+
+
 def GoLimit():
-#-----------------------------------------------------------------------
+    pass
+
 def ConfigSteps():
-#-----------------------------------------------------------------------
+    pass
+
+
 def SetSteps():
+    pass
+
+
 # ============================================================================
 # ============================= MAIN =========================================
 # ============================================================================
-salir = False                           # Initial Values
+exit = False                           # Initial Values
 vMS = 1                                 # value MS (1, 2, 4, 8, 16)
 vDir = 1                                # value Dir: 1 (to White) , 2 (to Yellow)
 vSteps = 0                              # value vSteps (1, ...)
@@ -49,7 +64,7 @@ vLDWhite = GPIO.input(PinFdCWhite)
 vLDYellow = GPIO.input(PinFdCYellow)
 steps = 0                               # running steps
 
-while not salir:
+while not exit:
     print ('Options:')
     print ('    E.- Exit program ')
     print ('    M.- Speed Mode ')
@@ -63,14 +78,20 @@ while not salir:
     print
     op = input('> ')
     if (op == "E" or op == "e"):
+        pass
 
     if (op == "M" or op== "m"):
+        pass
 
     if (op == "D" or op== "d"):
+        pass
 
     if (op == "L" or op == "l"):
+        pass
 
     if (op == "S" or op == "s"):
+        exit = True
+
 # ---------------------------------------------------------------
 GPIO.cleanup()
 # ---------------------------------------------------------------
